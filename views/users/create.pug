@@ -1,0 +1,8 @@
+extends ../layouts/common.pug
+
+block content
+   h1 create user
+
+   form(action="/users/create" method="POST")
+      input(type="text", name = "name")
+      button.btn.btn-primary(type='submit') Submit

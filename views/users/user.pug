@@ -1,0 +1,15 @@
+extends ../layouts/common.pug
+
+block content
+      h1 Page Users
+
+      form(action="/users/search" method="method")
+            input(type="text", name="q")
+            button(type='submit') Submit
+      ul 
+      each user in users
+            li= user.name 
+                  span &nbsp;
+                        a(href='/users/' + user.id) View
+
+      a(href="/users/create") Create User
